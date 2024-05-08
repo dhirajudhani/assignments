@@ -31,6 +31,7 @@ function wait3(t) {
 function calculateTime(t1, t2, t3) {
 
     const startTime = Date.now()
+    console.log(startTime)
 
     const promise1 = wait1(t1);
     const promise2 = wait1(t2);
@@ -38,14 +39,16 @@ function calculateTime(t1, t2, t3) {
 
     return Promise.all([promise1, promise2, promise3]).then(() => {
         const endTime = Date.now();
+        console.log(endTime)
 
         const ellapsedTme = endTime - startTime;
+
 
         return ellapsedTme 
     })
 
 }
-calculateTime(1000, 2000, 3000)
+calculateTime(1, 2, 3)
     .then((timeElapsed) => {
         console.log("All promises have resolved in", timeElapsed, "milliseconds");
     })
