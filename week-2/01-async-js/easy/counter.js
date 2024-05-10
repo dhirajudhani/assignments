@@ -1,4 +1,4 @@
 let c = 0;
 const task = setInterval(() => {
-    console.log(c++)
+    console.log(c++);
 }, 1000);
